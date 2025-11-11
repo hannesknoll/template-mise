@@ -8,6 +8,10 @@
 - Implement task script to get build stamp
 - Implement changelog generation on push
 
+### 🐛 Bug Fixes
+
+- Changelog generation
+
 ### 📚 Documentation
 
 - Add minimal readme
@@ -16,3 +20,5 @@
 
 - Don't require capitaliztion in commits
 - Improve changelog generation
+- Improve changelog generation
+- Use post-commit to generate a changelog

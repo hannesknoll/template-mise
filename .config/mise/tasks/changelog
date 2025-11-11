@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-git-cliff -o
+git-cliff -o CHANGELOG.md
 
 git add CHANGELOG.md
-git commit --no-edit --amend
+# Disable lefthook hooks to prevent recursion
+LEFTHOOK=0 git commit --no-edit --amend

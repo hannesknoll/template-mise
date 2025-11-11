@@ -1,20 +1,27 @@
 pre-commit:
   parallel: true
-  commands:  
+  commands:
     # Format staged files
     # format:
     #   glob: "*.{js,jsx,ts,tsx,astro,json,css}"
     #   run: prettier --write {staged_files}
     #   stage_fixed: true
-    
+
     # Type check
     # typecheck:
     #   glob: "*.astro"
     #   run: astro check {staged_files}
+    # 
+
+post-commit:
+  parallel: true
+  commands:
+    changelog:
+      run: mise run changelog
 
 pre-push:
   parallel: true
-  commands:    
+  commands:
     # Build check to ensure project builds successfully
     # build:
     #   glob: "*.{js,jsx,ts,tsx,astro,json,css}"
