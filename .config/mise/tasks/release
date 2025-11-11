@@ -12,17 +12,10 @@ def main [
         git add CHANGELOG.md
     }
 
-    git diff --staged --quiet --exit-code
+    let has_changes = (git diff --staged --quiet --exit-code | complete).exit_code != 0
 
-    if $env.LAST_EXIT_CODE == 0 {
-        echo "CHANGELOG.md has no changes to commit."
-    } else {    
-        if not $dry {
-            git commit -m $"docs(changelog): update for v($version)"
-        }
-    }
-
-    if not $dry {
+    if $has_changes and not $dry {
+        git commit -m $"docs(changelog): update for v($version)"
         git tag -a $version -m $"Release ($version)"
     }
 

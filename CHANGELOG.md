@@ -17,6 +17,7 @@
 ### 🚜 Refactor
 
 - Improve release script
+- Improve release script with change check
 
 ### 📚 Documentation
 
