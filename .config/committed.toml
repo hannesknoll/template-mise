@@ -1,5 +1,5 @@
 subject_length = 50
-subject_capitalized = true
+subject_capitalized = false
 subject_not_punctuated = true
 imperative_subject = true
 no_fixup = true
