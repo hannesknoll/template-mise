@@ -9,7 +9,9 @@ def main [
     git-cliff -o CHANGELOG.md
 
     if not $dry {
-        git add CHANGELOG.md
+        try {
+            git add CHANGELOG.md
+        } catch { }
     }
 
     let has_changes = (git diff --staged --quiet --exit-code | complete).exit_code != 0

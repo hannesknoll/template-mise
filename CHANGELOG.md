@@ -18,6 +18,7 @@
 
 - Improve release script
 - Improve release script with change check
+- Improve release task
 
 ### 📚 Documentation
 
