@@ -31,5 +31,5 @@ commit-msg:
   commands:
     # Validate commit message format
     commitlint:
-      run: committed --commit-file {1}
+      run: committed --config .config/committed.toml --commit-file {1}
 
