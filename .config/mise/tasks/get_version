@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#MISE description="stamp a build with a meaningful version"
+#MISE alias="b"
+#MISE env={PRODUCTION = "1"}
+#MISE depends=["format"]
+
+# Get a descriptive version string from Git
+GIT_VERSION="$(git describe --tags --always --dirty)"
+
+# Print it to the build log for traceability
+echo "Current build version: $GIT_VERSION"
+
+# Export it for use in other build steps (e.g., embedding in the app)
+export PUBLIC_BUILD_VERSION="$GIT_VERSION"
