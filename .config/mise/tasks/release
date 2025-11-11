@@ -23,12 +23,12 @@ def main [
     }
 
     if not $dry {
-        git tag -a "$TAG" -m $"Release ($version)"
+        git tag -a $version -m $"Release ($version)"
     }
 
-    echo "Successfully created release $TAG"
+    echo $"Successfully created release ($version)"
     echo "To publish, run: git push && git push --tags"
-    
+
 }
 
 

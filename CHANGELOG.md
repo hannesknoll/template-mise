@@ -7,11 +7,16 @@
 - Add tasks to path
 - Implement task script to get build stamp
 - Implement changelog generation on push
+- Implement release task
 
 ### 🐛 Bug Fixes
 
 - Changelog generation
 - Don't create changelog on every commit
+
+### 🚜 Refactor
+
+- Improve release script
 
 ### 📚 Documentation
 
