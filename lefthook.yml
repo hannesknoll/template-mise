@@ -27,6 +27,9 @@ pre-push:
     # test:
     #   run: bun test
 
+    changelog:
+      run: mise run changelog
+
 commit-msg:
   commands:
     # Validate commit message format
