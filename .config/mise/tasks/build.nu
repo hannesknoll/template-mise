@@ -1,0 +1,12 @@
+#!/usr/bin/env nu
+#MISE description="Build"
+#MISE alias="b"
+#MISE env={PRODUCTION = "1"}
+#MISE depends=["format"]
+
+def main [
+  dir: string  # Directory to bulid
+] {
+  print $dir
+}
+
