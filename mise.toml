@@ -29,6 +29,3 @@ _.file = "./.env.local"        # Load env vars from .env file
 
 [tasks.clean]
 run = "rm -rf node_modules"
-
-[tasks.changelog]
-run = "git-cliff -o"

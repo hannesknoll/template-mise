@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+git-cliff -o
+
+git add CHANGELOG.md
+git commit --no-edit --amend
