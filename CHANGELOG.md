@@ -15,3 +15,4 @@
 ### ⚙️ Miscellaneous Tasks
 
 - Don't require capitaliztion in commits
+- Improve changelog generation
