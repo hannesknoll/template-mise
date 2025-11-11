@@ -11,6 +11,7 @@
 ### 🐛 Bug Fixes
 
 - Changelog generation
+- Don't create changelog on every commit
 
 ### 📚 Documentation
 

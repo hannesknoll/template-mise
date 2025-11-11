@@ -1,0 +1,34 @@
+#!/usr/bin/env nu
+
+
+def main [
+    version: string
+    --dry
+] {
+
+    git-cliff -o CHANGELOG.md
+
+    if not $dry {
+        git add CHANGELOG.md
+    }
+
+    git diff --staged --quiet --exit-code
+
+    if $env.LAST_EXIT_CODE == 0 {
+        echo "CHANGELOG.md has no changes to commit."
+    } else {    
+        if not $dry {
+            git commit -m $"docs(changelog): update for v($version)"
+        }
+    }
+
+    if not $dry {
+        git tag -a "$TAG" -m $"Release ($version)"
+    }
+
+    echo "Successfully created release $TAG"
+    echo "To publish, run: git push && git push --tags"
+    
+}
+
+
