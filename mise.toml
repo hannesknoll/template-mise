@@ -13,6 +13,8 @@ git-cliff = "latest"
 gitleaks = "latest"
 lefthook = "latest"
 committed = "latest"
+# "github:nushell/nushell" = "latest"
+# "github:quarto-dev/quarto-cli" = "latest"
 
 [hooks]
 postinstall = ["lefthook install"]  # Install Git hooks after installation
