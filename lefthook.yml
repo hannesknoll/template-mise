@@ -11,13 +11,7 @@ pre-commit:
     # typecheck:
     #   glob: "*.astro"
     #   run: astro check {staged_files}
-    # 
-
-post-commit:
-  parallel: true
-  commands:
-    changelog:
-      run: mise run changelog
+    #
 
 pre-push:
   parallel: true
@@ -42,4 +36,3 @@ commit-msg:
     # Validate commit message format
     commitlint:
       run: committed --config .config/committed.toml --commit-file {1}
-
