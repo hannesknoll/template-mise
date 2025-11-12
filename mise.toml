@@ -2,6 +2,7 @@
 bun = "latest"
 deno = "latest"
 node = { version = "22", postinstall = "corepack enable" }
+typst = "latest"
 
 # === From GitHub ===
 "github:pocketbase/pocketbase" = "latest"
@@ -26,6 +27,8 @@ _.path = [
   ".config/mise/tasks",
 ]
 _.file = "./.env.local"        # Load env vars from .env file
+TYPST_ROOT = "."
+TYPST_FONT_PATHS = "./assets/fonts"
 
 [tasks.clean]
 run = "rm -rf node_modules"
